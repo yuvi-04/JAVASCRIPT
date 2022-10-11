@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="regxpDemo.js"></script>
+</head>
+<body>
+    <input type = "text" id = "txt"> <br><br>
+    <button onclick="testRegex()">Test</button>
+    <p id = "result"></p><br>
+    
+    <form method="GET" action="#" onsubmit="return formSubmit(this)">
+    
+    Email <input type="text" id = "email1" name = "email1" onchange="testValid(this)" required>
+    <br><br>
+    Email <input type="text" id = "email2" name = "email2" onchange="testValid(this)" required>
+    <br><br>
+    Pan Number <input type="text" id="pan" name = "pan"oninput="testAnyRegex(this,/^[a-z]{5}[0-9]{4}[a-z]{1}$/i)"><br><br>
+    phone number <input type="tel" id="tel" name = "phone" onchange="testValid(this)"><br><br>
+    age <input type="number" id="age" min="18" max="60" name = "age" onchange="testValid(this)"><br><br>
+    <input type="submit" value="submit data">
+    </form>
+</body>
+</html>
